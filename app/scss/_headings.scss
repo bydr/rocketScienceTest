@@ -1,0 +1,61 @@
+.dr-headings {
+
+  &-h1 {
+    font-family: $default-font;
+    font-size: 29px;
+    line-height: 35px;
+    letter-spacing: 0.03em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+
+  &-h4 {
+    font-family: $default-font;
+    font-size: 18px;
+    line-height: 17px;
+    font-weight: bold;
+  }
+}
+
+.dr-text {
+
+  &__default {
+    font-family: $default-font;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  &__middle {
+    font-family: $default-font;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+
+  &__small{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+  }
+
+  &__small-extra {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 25px;
+  }
+
+  &-weight-medium {
+
+
+  }
+
+  &__uppercase {
+    text-transform: uppercase!important;
+  }
+}

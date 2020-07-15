@@ -1,0 +1,7 @@
+@import "_mixins/font-face";
+
+@include font-face("KievitPro", "../fonts/KievitPro-Thin", 300);
+@include font-face("KievitPro", "../fonts/KievitPro-Regular");
+@include font-face("KievitPro", "../fonts/KievitPro-Medium", 500);
+@include font-face("KievitPro", "../fonts/KievitPro-ExtraBold", bold);
+@include font-face("roboto", "../fonts/Roboto-Regular");

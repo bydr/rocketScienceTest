@@ -1,0 +1,89 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+  .reviews-carousel.owl-carousel .owl-dots {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 15px;
+  }
+  .review {
+
+    &-item {
+      width: 260px;
+
+      &__footer {
+        flex-direction: column;
+        align-items: flex-start;
+        > * {
+          margin: 0;
+        }
+      }
+
+    }
+  }
+  .dr-panel {
+    padding: 20px 15px;
+  }
+
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+  .chats>.row>*:first-child .chat {
+    margin-right: 10px;
+  }
+
+  .chats>.row>*:last-child .chat {
+    margin-left: 10px;
+  }
+
+  .travelask-block {
+
+    &__content {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+
+}

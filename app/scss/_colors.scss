@@ -1,0 +1,26 @@
+.bg {
+  &-beige {
+    background-color: $beige;
+  }
+}
+
+.c {
+  &-light {
+    color: $light!important;
+    > * {
+      color: inherit;
+    }
+  }
+  &-accent {
+    color: $accent!important;
+    > * {
+      color: inherit;
+    }
+  }
+  &-gray {
+    color: $gray!important;
+    > * {
+      color: inherit;
+    }
+  }
+}

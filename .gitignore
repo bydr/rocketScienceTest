@@ -9,3 +9,7 @@
 /.idea
 /app/sass/
 /app/libs/
+.bowerrc
+gulpfile.js
+package-lock.json
+package.json

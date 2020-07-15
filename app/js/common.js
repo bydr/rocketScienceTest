@@ -62,13 +62,17 @@ $(function() {
     var chatWClient = $('.chat-with-client');
 
 
-    $('.chat-with-admin .dr-btn__box').on('click', sendMessage('admin'));
-    $('.chat-with-client .dr-btn__box').on('click', sendMessage('client'));
+    $('.chat-with-admin .dr-btn__box').on('click', function (e) {
+        sendMessage('admin', $(this));
+    });
+    $('.chat-with-client .dr-btn__box').on('click', function (e) {
+        sendMessage('client', $(this));
+    });
 
-    function sendMessage(role) {
-        let msg = $(this).closest('.chat-footer').find('.dr-input').val();
+    function sendMessage(role, parent) {
+        let input = parent.closest('.chat-footer').find('.dr-input');
+        let msg = input.val();
         var chatAvatar = "", chatClass = "";
-        console.log(1)
 
         switch (role) {
             case 'admin':
@@ -82,10 +86,13 @@ $(function() {
         }
 
         if (msg) {
-            $(this)
-                .closest('.chat')
-                .find('.custom-scroll_inner')
-                .append(`
+            appentMessage(chatClass, chatAvatar, msg);
+            input.val("");
+        }
+    }
+
+    function appentMessage(chatClass, chatAvatar, msg) {
+        let msgTemplate = `
     <div class="chat-message ${chatClass}">
 \t\t\t\t\t\t\t\t\t\t<div class="user">
 \t\t\t\t\t\t\t\t\t\t\t<div class="user-avatar__wrapper">
@@ -100,7 +107,10 @@ $(function() {
 \t\t\t\t\t\t\t\t\t\t\t\tВчера в 17:45
 \t\t\t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>`);
-        }
+\t\t\t\t\t\t\t\t\t</div>`;
+
+        $('.chat-with-admin, .chat-with-client')
+            .find('.custom-scroll_inner')
+            .append(msgTemplate);
     }
 });
